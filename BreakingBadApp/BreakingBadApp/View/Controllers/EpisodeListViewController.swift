@@ -10,13 +10,51 @@ import UIKit
 class EpisodeListViewController: UIViewController {
     
     @IBOutlet weak var episodeListTableView: UITableView!
+    let bounds = UIScreen.main.bounds
+    
+    var characterView: UIView {
+        let view = UIView()
+        view.frame = CGRect(x: 20, y: 50, width: bounds.width - 40, height: bounds.height - 300)
+        view.backgroundColor = .systemGray6
+        view.tag = 1
+        return view
+    }
+    
+    var xButton: UIButton {
+        let button = UIButton()
+        button.frame = CGRect(x: characterView.bounds.width - 5, y: 55, width: bounds.width * 0.05, height: bounds.width * 0.05)
+        button.tag = 2
+        button.setTitle("X", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 5
+        button.backgroundColor = .red
+        button.addTarget(self, action: #selector(xButtonTapped), for: .touchUpInside)
+        return button
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         delegateTableView()
         registerTableViewCell()
+        view.addSubview(characterView)
+        view.addSubview(xButton)
+        episodeListTableView.tag = 3
+        episodeListTableView.isHidden = true
+        showAndCloseView()
         
+    }
+    
+    
+    private func showAndCloseView(){
+        view.viewWithTag(1)?.isHidden.toggle()
+        view.viewWithTag(2)?.isHidden.toggle()
+        view.viewWithTag(3)?.isHidden.toggle()
+    }
+    
+    @objc func xButtonTapped(_ sender: UIButton!){
+        showAndCloseView()
     }
 
     func delegateTableView(){
@@ -27,6 +65,7 @@ class EpisodeListViewController: UIViewController {
     func registerTableViewCell(){
         episodeListTableView.register(UINib(nibName: "EpisodesTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
     }
+    
 
 }
 
@@ -45,6 +84,7 @@ extension EpisodeListViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showAndCloseView()
         print(indexPath.row)
     }
     
