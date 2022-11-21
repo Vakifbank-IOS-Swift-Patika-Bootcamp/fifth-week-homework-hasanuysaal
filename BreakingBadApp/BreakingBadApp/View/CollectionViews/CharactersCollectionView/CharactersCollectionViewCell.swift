@@ -8,10 +8,5 @@
 import UIKit
 
 class CharactersCollectionViewCell: UICollectionViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
-    }
-
+    
 }
