@@ -16,6 +16,9 @@
 		40763918292BA0F1009B302E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40763916292BA0F1009B302E /* LaunchScreen.storyboard */; };
 		40FB206E292BC10C00177940 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB206D292BC10C00177940 /* CharacterDetailsViewController.swift */; };
 		40FB2071292BC19300177940 /* CharacterQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB2070292BC19300177940 /* CharacterQuotesViewController.swift */; };
+		40FB2075292BCBDA00177940 /* EpisodesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB2073292BCBDA00177940 /* EpisodesTableViewCell.swift */; };
+		40FB2076292BCBDA00177940 /* EpisodesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40FB2074292BCBDA00177940 /* EpisodesTableViewCell.xib */; };
+		40FB2078292BCCC900177940 /* EpisodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB2077292BCCC900177940 /* EpisodeListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		40763919292BA0F1009B302E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40FB206D292BC10C00177940 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		40FB2070292BC19300177940 /* CharacterQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterQuotesViewController.swift; sourceTree = "<group>"; };
+		40FB2073292BCBDA00177940 /* EpisodesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewCell.swift; sourceTree = "<group>"; };
+		40FB2074292BCBDA00177940 /* EpisodesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodesTableViewCell.xib; sourceTree = "<group>"; };
+		40FB2077292BCCC900177940 /* EpisodeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 		4076391F292BA1AB009B302E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				40FB2072292BCA9900177940 /* TableViews */,
 				40763922292BA5A9009B302E /* CollectionViews */,
 				40763921292BA59C009B302E /* Controllers */,
 			);
@@ -96,6 +103,7 @@
 				4076390F292BA0F0009B302E /* CharactersViewController.swift */,
 				40FB206D292BC10C00177940 /* CharacterDetailsViewController.swift */,
 				40FB2070292BC19300177940 /* CharacterQuotesViewController.swift */,
+				40FB2077292BCCC900177940 /* EpisodeListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -106,6 +114,15 @@
 				40763920292BA583009B302E /* CharactersCollectionView */,
 			);
 			path = CollectionViews;
+			sourceTree = "<group>";
+		};
+		40FB2072292BCA9900177940 /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				40FB2073292BCBDA00177940 /* EpisodesTableViewCell.swift */,
+				40FB2074292BCBDA00177940 /* EpisodesTableViewCell.xib */,
+			);
+			path = TableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40763918292BA0F1009B302E /* LaunchScreen.storyboard in Resources */,
+				40FB2076292BCBDA00177940 /* EpisodesTableViewCell.xib in Resources */,
 				40763915292BA0F1009B302E /* Assets.xcassets in Resources */,
 				40763913292BA0F0009B302E /* Main.storyboard in Resources */,
 			);
@@ -179,11 +197,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40FB2075292BCBDA00177940 /* EpisodesTableViewCell.swift in Sources */,
 				400896EA292BB95400149E81 /* CharactersCollectionViewCell.swift in Sources */,
 				40763910292BA0F0009B302E /* CharactersViewController.swift in Sources */,
 				40FB206E292BC10C00177940 /* CharacterDetailsViewController.swift in Sources */,
 				4076390C292BA0F0009B302E /* AppDelegate.swift in Sources */,
 				4076390E292BA0F0009B302E /* SceneDelegate.swift in Sources */,
+				40FB2078292BCCC900177940 /* EpisodeListViewController.swift in Sources */,
 				40FB2071292BC19300177940 /* CharacterQuotesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

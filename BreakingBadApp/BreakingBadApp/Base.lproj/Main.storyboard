@@ -257,14 +257,29 @@
         <!--Episodes-->
         <scene sceneID="uvj-QY-uc5">
             <objects>
-                <viewController id="zCN-8X-yG0" sceneMemberID="viewController">
+                <viewController id="zCN-8X-yG0" customClass="EpisodeListViewController" customModule="BreakingBadApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xPi-Wm-ieb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GMh-8D-0dx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7hk-Gx-8iB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7hk-Gx-8iB" firstAttribute="trailing" secondItem="GMh-8D-0dx" secondAttribute="trailing" id="K7A-eM-tID"/>
+                            <constraint firstItem="GMh-8D-0dx" firstAttribute="leading" secondItem="7hk-Gx-8iB" secondAttribute="leading" id="eKg-Kx-2oP"/>
+                            <constraint firstItem="GMh-8D-0dx" firstAttribute="top" secondItem="7hk-Gx-8iB" secondAttribute="top" id="k15-AG-Gly"/>
+                            <constraint firstItem="7hk-Gx-8iB" firstAttribute="bottom" secondItem="GMh-8D-0dx" secondAttribute="bottom" id="mLE-gd-uJ4"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Episodes" image="ticket" catalog="system" id="e8u-tB-nDP"/>
+                    <connections>
+                        <outlet property="episodeListTableView" destination="GMh-8D-0dx" id="uah-Hc-qh7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Le-eh-WI6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
