@@ -15,12 +15,12 @@ final class CharactersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        delegatenCollectionViewCell()
+        delegatenCollectionView()
         
     }
     
     
-    private func delegatenCollectionViewCell(){
+    private func delegatenCollectionView(){
         charactersCollectionView.delegate = self
         charactersCollectionView.dataSource = self
     }
@@ -49,7 +49,8 @@ extension CharactersViewController: UICollectionViewDelegate{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailsVC" {
-            //let detailsVC = segue.destination as! CharacterDetailsViewController
+            let detailsVC = segue.destination as! CharacterDetailsViewController
+            detailsVC.count = 5
         }
     }
 }
