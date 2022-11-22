@@ -14,6 +14,7 @@
 		40763913292BA0F0009B302E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40763911292BA0F0009B302E /* Main.storyboard */; };
 		40763915292BA0F1009B302E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40763914292BA0F1009B302E /* Assets.xcassets */; };
 		40763918292BA0F1009B302E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40763916292BA0F1009B302E /* LaunchScreen.storyboard */; };
+		40C7082A292CB2C700D3BD45 /* ImdbWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */; };
 		40FB206E292BC10C00177940 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB206D292BC10C00177940 /* CharacterDetailsViewController.swift */; };
 		40FB2071292BC19300177940 /* CharacterQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB2070292BC19300177940 /* CharacterQuotesViewController.swift */; };
 		40FB2075292BCBDA00177940 /* EpisodesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB2073292BCBDA00177940 /* EpisodesTableViewCell.swift */; };
@@ -31,6 +32,7 @@
 		40763914292BA0F1009B302E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40763917292BA0F1009B302E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40763919292BA0F1009B302E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImdbWebViewViewController.swift; sourceTree = "<group>"; };
 		40FB206D292BC10C00177940 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		40FB2070292BC19300177940 /* CharacterQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterQuotesViewController.swift; sourceTree = "<group>"; };
 		40FB2073292BCBDA00177940 /* EpisodesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewCell.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				40FB206D292BC10C00177940 /* CharacterDetailsViewController.swift */,
 				40FB2070292BC19300177940 /* CharacterQuotesViewController.swift */,
 				40FB2077292BCCC900177940 /* EpisodeListViewController.swift */,
+				40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C7082A292CB2C700D3BD45 /* ImdbWebViewViewController.swift in Sources */,
 				40FB2075292BCBDA00177940 /* EpisodesTableViewCell.swift in Sources */,
 				400896EA292BB95400149E81 /* CharactersCollectionViewCell.swift in Sources */,
 				40763910292BA0F0009B302E /* CharactersViewController.swift in Sources */,
