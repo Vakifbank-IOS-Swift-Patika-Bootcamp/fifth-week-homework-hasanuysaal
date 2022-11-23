@@ -11,11 +11,27 @@ final class CharactersViewController: UIViewController {
     
     @IBOutlet private weak var charactersCollectionView: UICollectionView!
     
+    private var characters: [SerieCharacter]?{
+        didSet{
+            charactersCollectionView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         delegateCollectionView()
+        charactersList()
         
+    }
+    
+    private func charactersList(){
+        Client.getCharacters { characters, error in
+            guard let serieCharacters = characters else {
+                return
+            }
+            self.characters = serieCharacters
+        }
     }
     
     private func delegateCollectionView(){
@@ -28,12 +44,14 @@ final class CharactersViewController: UIViewController {
 extension CharactersViewController:  UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return characters?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = charactersCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CharactersCollectionViewCell
-        cell.configure(name: "Hasan", nickName: "Uysal", birthday: "21.03.1998")
+        guard let cell = charactersCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CharactersCollectionViewCell, let characters = self.characters else {
+            return UICollectionViewCell()
+        }
+        cell.configure(name: characters[indexPath.row].name, nickName: characters[indexPath.row].nickname, birthday: characters[indexPath.row].birthday)
         return cell
     }
 }
