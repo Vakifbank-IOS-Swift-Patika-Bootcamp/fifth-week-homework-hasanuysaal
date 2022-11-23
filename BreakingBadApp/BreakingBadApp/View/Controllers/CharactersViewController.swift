@@ -27,10 +27,8 @@ final class CharactersViewController: UIViewController {
     
     private func charactersList(){
         Client.getCharacters { characters, error in
-            guard let serieCharacters = characters else {
-                return
-            }
-            self.characters = serieCharacters
+            print(characters)
+            self.characters = characters
         }
     }
     
@@ -59,13 +57,25 @@ extension CharactersViewController:  UICollectionViewDataSource{
 extension CharactersViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toDetailsVC", sender: nil)
+        performSegue(withIdentifier: "toDetailsVC", sender: indexPath)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailsVC" {
-            let detailsVC = segue.destination as! CharacterDetailsViewController
-            detailsVC.count = 5
+            guard let detailsVC = segue.destination as? CharacterDetailsViewController, let characters = self.characters, let selectedIndexPath = sender as? IndexPath else {
+                return
+            }
+            print(selectedIndexPath)
+            print(characters[selectedIndexPath.row])
+            detailsVC.selectedCharacter = characters[selectedIndexPath.row]
+            /*
+            detailsVC.configure(
+                name: characters[selectedIndexPath.row].name,
+                nickname: characters[selectedIndexPath.row].nickname,
+                birthday: characters[selectedIndexPath.row].birthday,
+                status: characters[selectedIndexPath.row].status
+            )*/
         }
     }
 }

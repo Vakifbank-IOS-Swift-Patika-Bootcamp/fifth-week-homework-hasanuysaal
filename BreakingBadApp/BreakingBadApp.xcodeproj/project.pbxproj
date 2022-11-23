@@ -17,6 +17,9 @@
 		40763913292BA0F0009B302E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40763911292BA0F0009B302E /* Main.storyboard */; };
 		40763915292BA0F1009B302E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40763914292BA0F1009B302E /* Assets.xcassets */; };
 		40763918292BA0F1009B302E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40763916292BA0F1009B302E /* LaunchScreen.storyboard */; };
+		40AC8978292EAC66009747D2 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AC8977292EAC66009747D2 /* Quotes.swift */; };
+		40AC897B292EB008009747D2 /* QuotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AC8979292EB008009747D2 /* QuotesTableViewCell.swift */; };
+		40AC897C292EB008009747D2 /* QuotesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40AC897A292EB008009747D2 /* QuotesTableViewCell.xib */; };
 		40C7082A292CB2C700D3BD45 /* ImdbWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */; };
 		40FB206E292BC10C00177940 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB206D292BC10C00177940 /* CharacterDetailsViewController.swift */; };
 		40FB2071292BC19300177940 /* CharacterQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB2070292BC19300177940 /* CharacterQuotesViewController.swift */; };
@@ -38,6 +41,9 @@
 		40763914292BA0F1009B302E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40763917292BA0F1009B302E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40763919292BA0F1009B302E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40AC8977292EAC66009747D2 /* Quotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
+		40AC8979292EB008009747D2 /* QuotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesTableViewCell.swift; sourceTree = "<group>"; };
+		40AC897A292EB008009747D2 /* QuotesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuotesTableViewCell.xib; sourceTree = "<group>"; };
 		40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImdbWebViewViewController.swift; sourceTree = "<group>"; };
 		40FB206D292BC10C00177940 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		40FB2070292BC19300177940 /* CharacterQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterQuotesViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +68,7 @@
 			children = (
 				401E5380292E18BC00E05A8A /* BaseResponse.swift */,
 				401E5382292E18D000E05A8A /* Character.swift */,
+				40AC8977292EAC66009747D2 /* Quotes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,11 +151,29 @@
 			path = CollectionViews;
 			sourceTree = "<group>";
 		};
-		40FB2072292BCA9900177940 /* TableViews */ = {
+		40AC897D292EB00B009747D2 /* Episodes */ = {
 			isa = PBXGroup;
 			children = (
 				40FB2073292BCBDA00177940 /* EpisodesTableViewCell.swift */,
 				40FB2074292BCBDA00177940 /* EpisodesTableViewCell.xib */,
+			);
+			path = Episodes;
+			sourceTree = "<group>";
+		};
+		40AC897E292EB01E009747D2 /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				40AC8979292EB008009747D2 /* QuotesTableViewCell.swift */,
+				40AC897A292EB008009747D2 /* QuotesTableViewCell.xib */,
+			);
+			path = Quotes;
+			sourceTree = "<group>";
+		};
+		40FB2072292BCA9900177940 /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				40AC897E292EB01E009747D2 /* Quotes */,
+				40AC897D292EB00B009747D2 /* Episodes */,
 			);
 			path = TableViews;
 			sourceTree = "<group>";
@@ -214,6 +239,7 @@
 				40763918292BA0F1009B302E /* LaunchScreen.storyboard in Resources */,
 				40FB2076292BCBDA00177940 /* EpisodesTableViewCell.xib in Resources */,
 				40763915292BA0F1009B302E /* Assets.xcassets in Resources */,
+				40AC897C292EB008009747D2 /* QuotesTableViewCell.xib in Resources */,
 				40763913292BA0F0009B302E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,7 +255,9 @@
 				40FB2075292BCBDA00177940 /* EpisodesTableViewCell.swift in Sources */,
 				401E5385292E195800E05A8A /* Client.swift in Sources */,
 				401E5383292E18D000E05A8A /* Character.swift in Sources */,
+				40AC897B292EB008009747D2 /* QuotesTableViewCell.swift in Sources */,
 				400896EA292BB95400149E81 /* CharactersCollectionViewCell.swift in Sources */,
+				40AC8978292EAC66009747D2 /* Quotes.swift in Sources */,
 				40763910292BA0F0009B302E /* CharactersViewController.swift in Sources */,
 				40FB206E292BC10C00177940 /* CharacterDetailsViewController.swift in Sources */,
 				401E5381292E18BC00E05A8A /* BaseResponse.swift in Sources */,

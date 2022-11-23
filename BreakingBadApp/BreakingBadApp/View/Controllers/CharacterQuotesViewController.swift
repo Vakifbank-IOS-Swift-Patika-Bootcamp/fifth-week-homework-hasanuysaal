@@ -11,11 +11,28 @@ final class CharacterQuotesViewController: UIViewController {
     
     @IBOutlet private weak var quotesTableView: UITableView!
     
-    var count = 0
+    var characterName: String?
+    var characterQuotes: [Quotes]?{
+        didSet{
+            quotesTableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         delegateTableView()
+        registerTableView()
+        guard let name = characterName else {
+            return
+        }
+        print(self.characterQuotes)
+        print("---------------")
+        Client.getQuotes(from: name) { quotes, error in
+            print(quotes?.count)
+            self.characterQuotes = quotes
+            
+        }
+        print(self.characterQuotes)
     }
     
     private func delegateTableView(){
@@ -23,16 +40,26 @@ final class CharacterQuotesViewController: UIViewController {
         quotesTableView.dataSource = self
     }
     
+    private func registerTableView(){
+        quotesTableView.register(UINib(nibName: "QuotesTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomQuotesTableViewCell")
+    }
+    
 }
 
 extension CharacterQuotesViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let count = characterQuotes?.count else{
+            return 1
+        }
         return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        guard let cell = quotesTableView.dequeueReusableCell(withIdentifier: "CustomQuotesTableViewCell", for: indexPath) as? QuotesTableViewCell,let quotes = characterQuotes else {
+            return UITableViewCell()
+        }
+        cell.configure(name: quotes[indexPath.row].author, quote: quotes[indexPath.row].quote)
         return cell
     }
 }

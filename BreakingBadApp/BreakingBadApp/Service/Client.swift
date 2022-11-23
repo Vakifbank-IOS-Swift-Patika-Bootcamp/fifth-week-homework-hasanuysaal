@@ -9,15 +9,28 @@ import Foundation
 
 class Client {
     
+    func x(){
+        print("a")
+    }
+    
     enum Endpoints {
         static let base = "https://www.breakingbadapi.com/api"
         
         case characters
+        case characterDetail(Int)
+        case characterQuotes(String)
+        
+        //quote?author=Walter+White
         
         var stringValue: String {
             switch self {
             case .characters:
                 return Endpoints.base + "/characters"
+            case .characterDetail(let charachterId):
+                return Endpoints.base + "/characters/\(charachterId)"
+            case .characterQuotes(var characterName):
+                characterName = characterName.replacingOccurrences(of: " ", with: "+")
+                return Endpoints.base + "/quote?author=\(characterName)"
             }
         }
         
@@ -67,4 +80,26 @@ class Client {
             }
         }
     }
+    
+    class func getCharacter(id: Int, completion: @escaping (SerieCharacter?, Error?) -> Void) {
+        taskForGETRequest(url: Endpoints.characterDetail(id).url, responseType: SerieCharacter.self) { response, error in
+            if let response = response {
+                completion(response, nil)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+    
+    class func getQuotes(from characterName: String, completion: @escaping ([Quotes]?, Error?) -> Void) {
+        taskForGETRequest(url: Endpoints.characterQuotes(characterName).url, responseType: [Quotes].self) { response, error in
+            if let response = response {
+                completion(response, nil)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+    
+    
 }

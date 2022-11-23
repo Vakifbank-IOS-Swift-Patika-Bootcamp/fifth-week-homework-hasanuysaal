@@ -7,17 +7,14 @@
 
 import UIKit
 
-class QuotesTableViewCell: UITableViewCell {
+final class QuotesTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var quoteLabel: UILabel!
+    
+    func configure(name: String, quote: String){
+        nameLabel.text = name
+        quoteLabel.text = quote
     }
     
 }
