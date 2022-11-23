@@ -7,8 +7,8 @@
 
 import UIKit
 
-class CharacterQuotesViewController: UIViewController {
-
+final class CharacterQuotesViewController: UIViewController {
+    
     @IBOutlet private weak var quotesTableView: UITableView!
     
     var count = 0

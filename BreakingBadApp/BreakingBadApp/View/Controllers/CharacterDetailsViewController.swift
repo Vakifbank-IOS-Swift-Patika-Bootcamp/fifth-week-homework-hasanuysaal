@@ -7,19 +7,22 @@
 
 import UIKit
 
-class CharacterDetailsViewController: UIViewController {
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var nickNameLabel: UILabel!
-    @IBOutlet weak var birthdayLabel: UILabel!
-    @IBOutlet weak var statusLabel: UILabel!
+final class CharacterDetailsViewController: UIViewController {
+    
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var nickNameLabel: UILabel!
+    @IBOutlet private weak var birthdayLabel: UILabel!
+    @IBOutlet private weak var statusLabel: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
     
     var count = 0
     
-    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
+    
     @IBAction func quotesButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "toQuotesVC", sender: nil)
     }

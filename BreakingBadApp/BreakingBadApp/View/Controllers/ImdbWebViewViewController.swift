@@ -8,10 +8,10 @@
 import UIKit
 import WebKit
 
-class ImdbWebViewViewController: UIViewController {
+final class ImdbWebViewViewController: UIViewController {
     
-    @IBOutlet weak var webView: WKWebView!
-
+    @IBOutlet private weak var webView: WKWebView!
+    
     var url: URL!
     var str = "https://www.imdb.com/title/tt0903747/"
     
@@ -28,7 +28,6 @@ class ImdbWebViewViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
     }
     
-    
     private func setStringToUrl(str: String){
         if let url = URL(string: str) {
             self.url = url
@@ -39,7 +38,7 @@ class ImdbWebViewViewController: UIViewController {
         webView.navigationDelegate = self
         webView.load(URLRequest(url: self.url))
     }
-
+    
 }
 
 extension ImdbWebViewViewController: WKNavigationDelegate {

@@ -7,12 +7,13 @@
 
 import UIKit
 
-class EpisodeListViewController: UIViewController {
+final class EpisodeListViewController: UIViewController {
     
-    @IBOutlet weak var episodeListTableView: UITableView!
+    @IBOutlet private weak var episodeListTableView: UITableView!
+    
     let bounds = UIScreen.main.bounds
     
-    var characterView: UIView {
+    private unowned var characterView: UIView {
         let view = UIView()
         view.frame = CGRect(x: 20, y: 50, width: bounds.width - 40, height: bounds.height - 300)
         view.backgroundColor = .systemGray6
@@ -20,7 +21,7 @@ class EpisodeListViewController: UIViewController {
         return view
     }
     
-    var xButton: UIButton {
+    private unowned var xButton: UIButton {
         let button = UIButton()
         button.frame = CGRect(x: characterView.bounds.width - 5, y: 55, width: bounds.width * 0.05, height: bounds.width * 0.05)
         button.tag = 2
@@ -46,7 +47,6 @@ class EpisodeListViewController: UIViewController {
         
     }
     
-    
     private func showAndCloseView(){
         view.viewWithTag(1)?.isHidden.toggle()
         view.viewWithTag(2)?.isHidden.toggle()
@@ -56,17 +56,16 @@ class EpisodeListViewController: UIViewController {
     @objc func xButtonTapped(_ sender: UIButton!){
         showAndCloseView()
     }
-
-    func delegateTableView(){
+    
+    private func delegateTableView(){
         episodeListTableView.delegate = self
         episodeListTableView.dataSource = self
     }
     
-    func registerTableViewCell(){
+    private func registerTableViewCell(){
         episodeListTableView.register(UINib(nibName: "EpisodesTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
     }
     
-
 }
 
 extension EpisodeListViewController: UITableViewDelegate, UITableViewDataSource{

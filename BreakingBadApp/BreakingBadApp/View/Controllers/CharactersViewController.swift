@@ -8,23 +8,21 @@
 import UIKit
 
 final class CharactersViewController: UIViewController {
-
-    @IBOutlet private weak var charactersCollectionView: UICollectionView!
     
+    @IBOutlet private weak var charactersCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        delegatenCollectionView()
+        delegateCollectionView()
         
     }
     
-    
-    private func delegatenCollectionView(){
+    private func delegateCollectionView(){
         charactersCollectionView.delegate = self
         charactersCollectionView.dataSource = self
     }
-
+    
 }
 
 extension CharactersViewController:  UICollectionViewDataSource{
@@ -38,11 +36,10 @@ extension CharactersViewController:  UICollectionViewDataSource{
         cell.configure(name: "Hasan", nickName: "Uysal", birthday: "21.03.1998")
         return cell
     }
-    
-    
 }
 
 extension CharactersViewController: UICollectionViewDelegate{
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toDetailsVC", sender: nil)
     }
