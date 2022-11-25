@@ -21,6 +21,7 @@ final class CharacterDetailsViewController: UIViewController {
         super.viewDidLoad()
         configure()
         
+        
     }
     
     func configure(){

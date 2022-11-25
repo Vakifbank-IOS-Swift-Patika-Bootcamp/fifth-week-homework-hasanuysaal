@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CharacterQuotesViewController: UIViewController {
+final class CharacterQuotesViewController: ActivityIndicatorViewController {
     
     @IBOutlet private weak var quotesTableView: UITableView!
     
@@ -25,8 +25,9 @@ final class CharacterQuotesViewController: UIViewController {
         guard let name = characterName else {
             return
         }
-        
+        indicator.startAnimating()
         Client.getQuotes(from: name) { quotes, error in
+            self.indicator.stopAnimating()
             self.characterQuotes = quotes
         }
     }

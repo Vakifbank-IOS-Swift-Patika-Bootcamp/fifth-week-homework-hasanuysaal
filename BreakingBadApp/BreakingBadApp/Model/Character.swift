@@ -13,6 +13,7 @@ struct SerieCharacter: Codable {
     let birthday: String
     let nickname: String
     let status: String
+    let imageUrl: String
     
     enum CodingKeys: String, CodingKey {
         case id = "char_id"
@@ -20,5 +21,6 @@ struct SerieCharacter: Codable {
         case birthday = "birthday"
         case nickname = "nickname"
         case status = "status"
+        case imageUrl = "img"
     }
 }

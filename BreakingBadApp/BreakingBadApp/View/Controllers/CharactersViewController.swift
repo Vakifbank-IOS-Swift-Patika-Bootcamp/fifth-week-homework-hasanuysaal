@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import MaterialActivityIndicator
 
-final class CharactersViewController: UIViewController {
+final class CharactersViewController: ActivityIndicatorViewController {
     
     @IBOutlet private weak var charactersCollectionView: UICollectionView!
+    
     
     private var characters: [SerieCharacter]?{
         didSet{
@@ -26,8 +28,9 @@ final class CharactersViewController: UIViewController {
     }
     
     private func charactersList(){
+        indicator.startAnimating()
         Client.getCharacters { characters, error in
-            print(characters)
+            self.indicator.stopAnimating()
             self.characters = characters
         }
     }
@@ -36,6 +39,8 @@ final class CharactersViewController: UIViewController {
         charactersCollectionView.delegate = self
         charactersCollectionView.dataSource = self
     }
+    
+    
     
 }
 
@@ -69,13 +74,6 @@ extension CharactersViewController: UICollectionViewDelegate{
             print(selectedIndexPath)
             print(characters[selectedIndexPath.row])
             detailsVC.selectedCharacter = characters[selectedIndexPath.row]
-            /*
-            detailsVC.configure(
-                name: characters[selectedIndexPath.row].name,
-                nickname: characters[selectedIndexPath.row].nickname,
-                birthday: characters[selectedIndexPath.row].birthday,
-                status: characters[selectedIndexPath.row].status
-            )*/
         }
     }
 }

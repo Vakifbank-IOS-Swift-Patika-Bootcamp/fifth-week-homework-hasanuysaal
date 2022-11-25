@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class EpisodeListViewController: UIViewController {
+final class EpisodeListViewController: ActivityIndicatorViewController {
     
     @IBOutlet private weak var episodeListTableView: UITableView!
     
@@ -52,11 +52,11 @@ final class EpisodeListViewController: UIViewController {
         episodeListTableView.isHidden = true
         showAndCloseView()
         
+        indicator.startAnimating()
         Client.getEpisodes { response, error in
-            print(response)
+            self.indicator.stopAnimating()
             self.episodes = response
         }
-        
     }
     
     private func showAndCloseView(){
@@ -108,7 +108,6 @@ extension EpisodeListViewController: UITableViewDelegate, UITableViewDataSource{
         showAndCloseView()
         if let text = episodes?[indexPath.row].characters.joined(separator: " "){
             characterLabel.text = text
-            
         }
     }
     
