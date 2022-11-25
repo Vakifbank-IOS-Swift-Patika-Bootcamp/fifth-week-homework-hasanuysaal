@@ -25,14 +25,10 @@ final class CharacterQuotesViewController: UIViewController {
         guard let name = characterName else {
             return
         }
-        print(self.characterQuotes)
-        print("---------------")
+        
         Client.getQuotes(from: name) { quotes, error in
-            print(quotes?.count)
             self.characterQuotes = quotes
-            
         }
-        print(self.characterQuotes)
     }
     
     private func delegateTableView(){

@@ -16,27 +16,25 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="162" translatesAutoresizingMaskIntoConstraints="NO" id="mMO-zm-yQJ">
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="mMO-zm-yQJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMx-1K-A2r">
-                                <rect key="frame" x="10" y="10" width="69" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMx-1K-A2r">
+                                <rect key="frame" x="10" y="10" width="160" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mv1-Wk-fDg">
-                                <rect key="frame" x="241" y="10" width="69" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mv1-Wk-fDg">
+                                <rect key="frame" x="170" y="10" width="140" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="EMx-1K-A2r" firstAttribute="centerY" secondItem="mMO-zm-yQJ" secondAttribute="centerY" id="2bR-Bk-Q1Y"/>
                             <constraint firstAttribute="bottom" secondItem="mv1-Wk-fDg" secondAttribute="bottom" constant="10" id="CQd-Cl-ATJ"/>
                             <constraint firstItem="EMx-1K-A2r" firstAttribute="top" secondItem="mMO-zm-yQJ" secondAttribute="top" constant="10" id="J8m-xS-hap"/>
-                            <constraint firstItem="mv1-Wk-fDg" firstAttribute="centerY" secondItem="mMO-zm-yQJ" secondAttribute="centerY" id="Qb7-CM-imu"/>
                             <constraint firstItem="EMx-1K-A2r" firstAttribute="leading" secondItem="mMO-zm-yQJ" secondAttribute="leading" constant="10" id="U7O-st-csY"/>
                             <constraint firstAttribute="trailing" secondItem="mv1-Wk-fDg" secondAttribute="trailing" constant="10" id="UYi-9H-8si"/>
                             <constraint firstItem="mv1-Wk-fDg" firstAttribute="top" secondItem="mMO-zm-yQJ" secondAttribute="top" constant="10" id="jOr-GV-zY4"/>
@@ -47,8 +45,6 @@
                 <constraints>
                     <constraint firstItem="mMO-zm-yQJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4LP-iK-RIE"/>
                     <constraint firstAttribute="trailing" secondItem="mMO-zm-yQJ" secondAttribute="trailing" id="7DC-lf-dSl"/>
-                    <constraint firstItem="mMO-zm-yQJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DKV-Pt-OXn"/>
-                    <constraint firstItem="mMO-zm-yQJ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="EKZ-mr-EYr"/>
                     <constraint firstAttribute="bottom" secondItem="mMO-zm-yQJ" secondAttribute="bottom" id="EVF-xx-hjr"/>
                     <constraint firstItem="mMO-zm-yQJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Fzp-58-FOd"/>
                 </constraints>

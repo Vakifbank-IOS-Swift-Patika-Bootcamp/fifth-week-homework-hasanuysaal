@@ -20,6 +20,7 @@
 		40AC8978292EAC66009747D2 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AC8977292EAC66009747D2 /* Quotes.swift */; };
 		40AC897B292EB008009747D2 /* QuotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AC8979292EB008009747D2 /* QuotesTableViewCell.swift */; };
 		40AC897C292EB008009747D2 /* QuotesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40AC897A292EB008009747D2 /* QuotesTableViewCell.xib */; };
+		40AC8980292EB80D009747D2 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AC897F292EB80D009747D2 /* Episode.swift */; };
 		40C7082A292CB2C700D3BD45 /* ImdbWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */; };
 		40FB206E292BC10C00177940 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB206D292BC10C00177940 /* CharacterDetailsViewController.swift */; };
 		40FB2071292BC19300177940 /* CharacterQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB2070292BC19300177940 /* CharacterQuotesViewController.swift */; };
@@ -44,6 +45,7 @@
 		40AC8977292EAC66009747D2 /* Quotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
 		40AC8979292EB008009747D2 /* QuotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesTableViewCell.swift; sourceTree = "<group>"; };
 		40AC897A292EB008009747D2 /* QuotesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuotesTableViewCell.xib; sourceTree = "<group>"; };
+		40AC897F292EB80D009747D2 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImdbWebViewViewController.swift; sourceTree = "<group>"; };
 		40FB206D292BC10C00177940 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		40FB2070292BC19300177940 /* CharacterQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterQuotesViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				401E5380292E18BC00E05A8A /* BaseResponse.swift */,
 				401E5382292E18D000E05A8A /* Character.swift */,
 				40AC8977292EAC66009747D2 /* Quotes.swift */,
+				40AC897F292EB80D009747D2 /* Episode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				4076390C292BA0F0009B302E /* AppDelegate.swift in Sources */,
 				4076390E292BA0F0009B302E /* SceneDelegate.swift in Sources */,
 				40FB2078292BCCC900177940 /* EpisodeListViewController.swift in Sources */,
+				40AC8980292EB80D009747D2 /* Episode.swift in Sources */,
 				40FB2071292BC19300177940 /* CharacterQuotesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

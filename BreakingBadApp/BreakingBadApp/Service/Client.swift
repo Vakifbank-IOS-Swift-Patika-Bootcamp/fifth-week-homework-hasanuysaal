@@ -19,6 +19,7 @@ class Client {
         case characters
         case characterDetail(Int)
         case characterQuotes(String)
+        case episodes
         
         //quote?author=Walter+White
         
@@ -31,6 +32,9 @@ class Client {
             case .characterQuotes(var characterName):
                 characterName = characterName.replacingOccurrences(of: " ", with: "+")
                 return Endpoints.base + "/quote?author=\(characterName)"
+            case .episodes:
+                return Endpoints.base + "/episodes"
+                
             }
         }
         
@@ -100,6 +104,17 @@ class Client {
             }
         }
     }
+    
+    class func getEpisodes(completion: @escaping ([Episode]?, Error?) -> Void) {
+        taskForGETRequest(url: Endpoints.episodes.url, responseType: [Episode].self) { response, error in
+            if let response = response {
+                completion(response, nil)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+    
     
     
 }
