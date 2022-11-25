@@ -21,7 +21,7 @@ final class EpisodeListViewController: BaseViewController {
     private var characterView: UIView {
         let view = UIView()
         view.frame = CGRect(x: 20, y: 50, width: bounds.width - 40, height: bounds.height - 300)
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = .gray
         view.tag = 1
         return view
     }
