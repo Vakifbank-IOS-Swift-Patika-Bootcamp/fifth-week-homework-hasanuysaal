@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CharacterQuotesViewController: ActivityIndicatorViewController {
+final class CharacterQuotesViewController: BaseViewController {
     
     @IBOutlet private weak var quotesTableView: UITableView!
     
@@ -20,15 +20,25 @@ final class CharacterQuotesViewController: ActivityIndicatorViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         delegateTableView()
         registerTableView()
+        
         guard let name = characterName else {
             return
         }
+        
         indicator.startAnimating()
         Client.getQuotes(from: name) { quotes, error in
             self.indicator.stopAnimating()
-            self.characterQuotes = quotes
+            if quotes?.count == 0 {
+                self.showAlert(message: "There is no quote from character") {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            } else {
+                self.characterQuotes = quotes
+            }
+            
         }
     }
     

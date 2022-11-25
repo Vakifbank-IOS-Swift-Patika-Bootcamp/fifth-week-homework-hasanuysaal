@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class EpisodeListViewController: ActivityIndicatorViewController {
+final class EpisodeListViewController: BaseViewController {
     
     @IBOutlet private weak var episodeListTableView: UITableView!
     

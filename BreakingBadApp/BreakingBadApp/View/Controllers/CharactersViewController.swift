@@ -6,9 +6,8 @@
 //
 
 import UIKit
-import MaterialActivityIndicator
 
-final class CharactersViewController: ActivityIndicatorViewController {
+final class CharactersViewController: BaseViewController {
     
     @IBOutlet private weak var charactersCollectionView: UICollectionView!
     
@@ -31,7 +30,16 @@ final class CharactersViewController: ActivityIndicatorViewController {
         indicator.startAnimating()
         Client.getCharacters { characters, error in
             self.indicator.stopAnimating()
+            if let error = error {
+                self.showAlert(message: error.localizedDescription) {}
+                return
+            }
+            if characters?.isEmpty ?? true {
+                self.showAlert(message: "Karakterler Yüklenemedi") {}
+                return
+            }
             self.characters = characters
+
         }
     }
     
@@ -54,7 +62,7 @@ extension CharactersViewController:  UICollectionViewDataSource{
         guard let cell = charactersCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CharactersCollectionViewCell, let characters = self.characters else {
             return UICollectionViewCell()
         }
-        cell.configure(name: characters[indexPath.row].name, nickName: characters[indexPath.row].nickname, birthday: characters[indexPath.row].birthday)
+        cell.configure(name: characters[indexPath.row].name, nickName: characters[indexPath.row].nickname, birthday: characters[indexPath.row].birthday, imageUrl: characters[indexPath.row].imageUrl)
         return cell
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 final class CharacterDetailsViewController: UIViewController {
     
@@ -29,7 +30,11 @@ final class CharacterDetailsViewController: UIViewController {
         nickNameLabel.text = selectedCharacter?.nickname
         birthdayLabel.text = selectedCharacter?.birthday
         statusLabel.text = selectedCharacter?.status
-        imageView.image = UIImage(named: "walterWhite")
+        if let url = selectedCharacter?.imageUrl {
+            imageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "breakingBad"))
+        }
+        
+        //imageView.image = UIImage(named: "walterWhite")
     }
     
     @IBAction func quotesButtonPressed(_ sender: Any) {

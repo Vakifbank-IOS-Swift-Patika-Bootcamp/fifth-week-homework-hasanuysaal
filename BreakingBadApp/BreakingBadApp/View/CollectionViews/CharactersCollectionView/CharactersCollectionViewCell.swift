@@ -14,11 +14,11 @@ final class CharactersCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var birthdayLabel: UILabel!
     @IBOutlet private weak var characterImage: UIImageView!
     
-    func configure(name: String, nickName: String, birthday: String){
+    func configure(name: String, nickName: String, birthday: String, imageUrl: String){
         nameLabel.text = name
         nickNameLabel.text = nickName
         birthdayLabel.text = birthday
-        characterImage.image = UIImage(named: "walterWhite")
+        characterImage.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "breakingBad"))
     }
     
 }

@@ -12,7 +12,9 @@
 		401E5383292E18D000E05A8A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401E5382292E18D000E05A8A /* Character.swift */; };
 		401E5385292E195800E05A8A /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401E5384292E195800E05A8A /* Client.swift */; };
 		404366092931099200BD9079 /* MaterialActivityIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 404366082931099200BD9079 /* MaterialActivityIndicator */; };
-		4043660B293116A600BD9079 /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4043660A293116A600BD9079 /* ActivityIndicatorViewController.swift */; };
+		4043660B293116A600BD9079 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4043660A293116A600BD9079 /* BaseViewController.swift */; };
+		40436610293120D100BD9079 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4043660F293120D100BD9079 /* SDWebImage */; };
+		40436613293127BB00BD9079 /* SwiftAlertView in Frameworks */ = {isa = PBXBuildFile; productRef = 40436612293127BB00BD9079 /* SwiftAlertView */; };
 		4076390C292BA0F0009B302E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4076390B292BA0F0009B302E /* AppDelegate.swift */; };
 		4076390E292BA0F0009B302E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4076390D292BA0F0009B302E /* SceneDelegate.swift */; };
 		40763910292BA0F0009B302E /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4076390F292BA0F0009B302E /* CharactersViewController.swift */; };
@@ -36,7 +38,7 @@
 		401E5380292E18BC00E05A8A /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		401E5382292E18D000E05A8A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		401E5384292E195800E05A8A /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
-		4043660A293116A600BD9079 /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
+		4043660A293116A600BD9079 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		40763908292BA0F0009B302E /* BreakingBadApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakingBadApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4076390B292BA0F0009B302E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4076390D292BA0F0009B302E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40436613293127BB00BD9079 /* SwiftAlertView in Frameworks */,
+				40436610293120D100BD9079 /* SDWebImage in Frameworks */,
 				404366092931099200BD9079 /* MaterialActivityIndicator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,7 +145,7 @@
 		40763921292BA59C009B302E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4043660A293116A600BD9079 /* ActivityIndicatorViewController.swift */,
+				4043660A293116A600BD9079 /* BaseViewController.swift */,
 				4076390F292BA0F0009B302E /* CharactersViewController.swift */,
 				40FB206D292BC10C00177940 /* CharacterDetailsViewController.swift */,
 				40FB2070292BC19300177940 /* CharacterQuotesViewController.swift */,
@@ -204,6 +208,8 @@
 			name = BreakingBadApp;
 			packageProductDependencies = (
 				404366082931099200BD9079 /* MaterialActivityIndicator */,
+				4043660F293120D100BD9079 /* SDWebImage */,
+				40436612293127BB00BD9079 /* SwiftAlertView */,
 			);
 			productName = BreakingBadApp;
 			productReference = 40763908292BA0F0009B302E /* BreakingBadApp.app */;
@@ -235,6 +241,8 @@
 			mainGroup = 407638FF292BA0F0009B302E;
 			packageReferences = (
 				404366072931099100BD9079 /* XCRemoteSwiftPackageReference "MaterialActivityIndicator" */,
+				4043660E293120D100BD9079 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				40436611293127BB00BD9079 /* XCRemoteSwiftPackageReference "SwiftAlertView" */,
 			);
 			productRefGroup = 40763909292BA0F0009B302E /* Products */;
 			projectDirPath = "";
@@ -274,7 +282,7 @@
 				40AC8978292EAC66009747D2 /* Quotes.swift in Sources */,
 				40763910292BA0F0009B302E /* CharactersViewController.swift in Sources */,
 				40FB206E292BC10C00177940 /* CharacterDetailsViewController.swift in Sources */,
-				4043660B293116A600BD9079 /* ActivityIndicatorViewController.swift in Sources */,
+				4043660B293116A600BD9079 /* BaseViewController.swift in Sources */,
 				401E5381292E18BC00E05A8A /* BaseResponse.swift in Sources */,
 				4076390C292BA0F0009B302E /* AppDelegate.swift in Sources */,
 				4076390E292BA0F0009B302E /* SceneDelegate.swift in Sources */,
@@ -508,6 +516,22 @@
 				minimumVersion = 0.0.7;
 			};
 		};
+		4043660E293120D100BD9079 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		40436611293127BB00BD9079 /* XCRemoteSwiftPackageReference "SwiftAlertView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dinhquan/SwiftAlertView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -515,6 +539,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 404366072931099100BD9079 /* XCRemoteSwiftPackageReference "MaterialActivityIndicator" */;
 			productName = MaterialActivityIndicator;
+		};
+		4043660F293120D100BD9079 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4043660E293120D100BD9079 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		40436612293127BB00BD9079 /* SwiftAlertView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40436611293127BB00BD9079 /* XCRemoteSwiftPackageReference "SwiftAlertView" */;
+			productName = SwiftAlertView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
