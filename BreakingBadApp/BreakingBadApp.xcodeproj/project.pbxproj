@@ -111,14 +111,11 @@
 		4076390A292BA0F0009B302E /* BreakingBadApp */ = {
 			isa = PBXGroup;
 			children = (
+				4084BC2329322E550027EA66 /* App */,
+				40763921292BA59C009B302E /* Controllers */,
 				401E537F292E182800E05A8A /* Service */,
 				401E537E292E181F00E05A8A /* Model */,
 				4076391F292BA1AB009B302E /* View */,
-				4076390B292BA0F0009B302E /* AppDelegate.swift */,
-				4076390D292BA0F0009B302E /* SceneDelegate.swift */,
-				40763911292BA0F0009B302E /* Main.storyboard */,
-				40763914292BA0F1009B302E /* Assets.xcassets */,
-				40763916292BA0F1009B302E /* LaunchScreen.storyboard */,
 				40763919292BA0F1009B302E /* Info.plist */,
 			);
 			path = BreakingBadApp;
@@ -127,7 +124,6 @@
 		4076391F292BA1AB009B302E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				40763921292BA59C009B302E /* Controllers */,
 				40FB2072292BCA9900177940 /* TableViews */,
 				40763922292BA5A9009B302E /* CollectionViews */,
 			);
@@ -161,6 +157,18 @@
 				40763920292BA583009B302E /* CharactersCollectionView */,
 			);
 			path = CollectionViews;
+			sourceTree = "<group>";
+		};
+		4084BC2329322E550027EA66 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4076390B292BA0F0009B302E /* AppDelegate.swift */,
+				4076390D292BA0F0009B302E /* SceneDelegate.swift */,
+				40763911292BA0F0009B302E /* Main.storyboard */,
+				40763914292BA0F1009B302E /* Assets.xcassets */,
+				40763916292BA0F1009B302E /* LaunchScreen.storyboard */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		40AC897D292EB00B009747D2 /* Episodes */ = {

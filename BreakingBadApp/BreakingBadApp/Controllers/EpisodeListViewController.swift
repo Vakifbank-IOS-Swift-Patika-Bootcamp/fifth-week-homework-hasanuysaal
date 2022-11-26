@@ -82,6 +82,7 @@ final class EpisodeListViewController: BaseViewController {
     private func delegateTableView(){
         episodeListTableView.delegate = self
         episodeListTableView.dataSource = self
+        episodeListTableView.estimatedRowHeight = UITableView.automaticDimension
     }
     
     private func registerTableViewCell(){
@@ -106,9 +107,12 @@ extension EpisodeListViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showAndCloseView()
-        if let text = episodes?[indexPath.row].characters.joined(separator: " "){
+        if let text = episodes?[indexPath.row].characters.joined(separator: ", "){
             characterLabel.text = text
         }
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
     }
     
 }
