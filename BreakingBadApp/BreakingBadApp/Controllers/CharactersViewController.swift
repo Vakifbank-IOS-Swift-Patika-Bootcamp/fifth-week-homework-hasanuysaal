@@ -20,7 +20,7 @@ final class CharactersViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        charactersCollectionView.clipsToBounds = false
         delegateCollectionView()
         charactersList()
         
