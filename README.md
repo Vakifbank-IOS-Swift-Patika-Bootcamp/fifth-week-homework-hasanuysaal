@@ -52,6 +52,6 @@ Karakterin Sözleri-Alıntıları Ekranı:
 
 ### 3.Tab
 
-![](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/fourth-week-homework-hasanuysaal/blob/main/gifs/thirdtTab.gif)
+![](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/fourth-week-homework-hasanuysaal/blob/main/gifs/thirdTab.gif)
 
 
