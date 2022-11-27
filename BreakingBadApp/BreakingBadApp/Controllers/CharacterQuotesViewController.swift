@@ -12,6 +12,7 @@ final class CharacterQuotesViewController: BaseViewController {
     @IBOutlet private weak var quotesTableView: UITableView!
     
     var characterName: String?
+    
     var characterQuotes: [Quotes]?{
         didSet{
             quotesTableView.reloadData()
@@ -38,7 +39,6 @@ final class CharacterQuotesViewController: BaseViewController {
             } else {
                 self.characterQuotes = quotes
             }
-            
         }
     }
     

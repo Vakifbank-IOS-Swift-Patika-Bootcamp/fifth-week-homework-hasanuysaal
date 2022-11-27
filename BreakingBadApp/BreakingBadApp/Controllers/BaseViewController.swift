@@ -10,7 +10,7 @@ import MaterialActivityIndicator
 import SwiftAlertView
 
 class BaseViewController: UIViewController {
-
+    
     let indicator = MaterialActivityIndicatorView()
     
     override func viewDidLoad() {
@@ -34,5 +34,5 @@ class BaseViewController: UIViewController {
             completion()
         }
     }
-
+    
 }

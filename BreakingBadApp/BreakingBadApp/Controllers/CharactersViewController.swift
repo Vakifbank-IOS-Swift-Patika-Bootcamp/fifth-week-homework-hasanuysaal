@@ -11,7 +11,6 @@ final class CharactersViewController: BaseViewController {
     
     @IBOutlet private weak var charactersCollectionView: UICollectionView!
     
-    
     private var characters: [SerieCharacter]?{
         didSet{
             charactersCollectionView.reloadData()
@@ -23,7 +22,6 @@ final class CharactersViewController: BaseViewController {
         charactersCollectionView.clipsToBounds = false
         delegateCollectionView()
         charactersList()
-        
     }
     
     private func charactersList(){
@@ -39,7 +37,6 @@ final class CharactersViewController: BaseViewController {
                 return
             }
             self.characters = characters
-
         }
     }
     
@@ -47,8 +44,6 @@ final class CharactersViewController: BaseViewController {
         charactersCollectionView.delegate = self
         charactersCollectionView.dataSource = self
     }
-    
-    
     
 }
 
@@ -71,7 +66,6 @@ extension CharactersViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toDetailsVC", sender: indexPath)
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -79,8 +73,6 @@ extension CharactersViewController: UICollectionViewDelegate{
             guard let detailsVC = segue.destination as? CharacterDetailsViewController, let characters = self.characters, let selectedIndexPath = sender as? IndexPath else {
                 return
             }
-            print(selectedIndexPath)
-            print(characters[selectedIndexPath.row])
             detailsVC.selectedCharacter = characters[selectedIndexPath.row]
         }
     }

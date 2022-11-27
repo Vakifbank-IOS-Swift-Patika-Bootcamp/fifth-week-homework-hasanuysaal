@@ -26,6 +26,8 @@
 		40AC897C292EB008009747D2 /* QuotesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40AC897A292EB008009747D2 /* QuotesTableViewCell.xib */; };
 		40AC8980292EB80D009747D2 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AC897F292EB80D009747D2 /* Episode.swift */; };
 		40C7082A292CB2C700D3BD45 /* ImdbWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */; };
+		40F36D2E2933B5C9005D5C8A /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F36D2D2933B5C9005D5C8A /* PopUpView.swift */; };
+		40F36D302933B5E3005D5C8A /* PopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F36D2F2933B5E3005D5C8A /* PopUpView.xib */; };
 		40FB206E292BC10C00177940 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB206D292BC10C00177940 /* CharacterDetailsViewController.swift */; };
 		40FB2071292BC19300177940 /* CharacterQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB2070292BC19300177940 /* CharacterQuotesViewController.swift */; };
 		40FB2075292BCBDA00177940 /* EpisodesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB2073292BCBDA00177940 /* EpisodesTableViewCell.swift */; };
@@ -52,6 +54,8 @@
 		40AC897A292EB008009747D2 /* QuotesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuotesTableViewCell.xib; sourceTree = "<group>"; };
 		40AC897F292EB80D009747D2 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImdbWebViewViewController.swift; sourceTree = "<group>"; };
+		40F36D2D2933B5C9005D5C8A /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		40F36D2F2933B5E3005D5C8A /* PopUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpView.xib; sourceTree = "<group>"; };
 		40FB206D292BC10C00177940 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		40FB2070292BC19300177940 /* CharacterQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterQuotesViewController.swift; sourceTree = "<group>"; };
 		40FB2073292BCBDA00177940 /* EpisodesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewCell.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 		4076391F292BA1AB009B302E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				40F36D312933B7E2005D5C8A /* PopUpView */,
 				40FB2072292BCA9900177940 /* TableViews */,
 				40763922292BA5A9009B302E /* CollectionViews */,
 			);
@@ -187,6 +192,15 @@
 				40AC897A292EB008009747D2 /* QuotesTableViewCell.xib */,
 			);
 			path = Quotes;
+			sourceTree = "<group>";
+		};
+		40F36D312933B7E2005D5C8A /* PopUpView */ = {
+			isa = PBXGroup;
+			children = (
+				40F36D2D2933B5C9005D5C8A /* PopUpView.swift */,
+				40F36D2F2933B5E3005D5C8A /* PopUpView.xib */,
+			);
+			path = PopUpView;
 			sourceTree = "<group>";
 		};
 		40FB2072292BCA9900177940 /* TableViews */ = {
@@ -269,6 +283,7 @@
 				40763918292BA0F1009B302E /* LaunchScreen.storyboard in Resources */,
 				40FB2076292BCBDA00177940 /* EpisodesTableViewCell.xib in Resources */,
 				40763915292BA0F1009B302E /* Assets.xcassets in Resources */,
+				40F36D302933B5E3005D5C8A /* PopUpView.xib in Resources */,
 				40AC897C292EB008009747D2 /* QuotesTableViewCell.xib in Resources */,
 				40763913292BA0F0009B302E /* Main.storyboard in Resources */,
 			);
@@ -282,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40C7082A292CB2C700D3BD45 /* ImdbWebViewViewController.swift in Sources */,
+				40F36D2E2933B5C9005D5C8A /* PopUpView.swift in Sources */,
 				40FB2075292BCBDA00177940 /* EpisodesTableViewCell.swift in Sources */,
 				401E5385292E195800E05A8A /* Client.swift in Sources */,
 				401E5383292E18D000E05A8A /* Character.swift in Sources */,

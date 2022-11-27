@@ -25,9 +25,9 @@ final class CharactersCollectionViewCell: UICollectionViewCell {
     
     private func setCellAppearance(){
         self.layer.cornerRadius = 25.0
-        viewWithTag(10)?.backgroundColor = .clear
-        viewWithTag(10)?.layer.borderWidth = 3.0
-        viewWithTag(10)?.layer.cornerRadius = 25.0
+        self.backgroundColor = .clear
+        self.layer.borderWidth = 1.0
+        self.layer.cornerRadius = 20.0
     }
     
 }

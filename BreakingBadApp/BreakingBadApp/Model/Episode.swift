@@ -12,6 +12,7 @@ struct Episode: Codable{
 
     let title: String
     let season: String
+    let episode: String
     let characters: [String]
     
 }

@@ -16,41 +16,12 @@ final class EpisodeListViewController: BaseViewController {
             episodeListTableView.reloadData()
         }
     }
-    private let bounds = UIScreen.main.bounds
-    
-    private var characterView: UIView {
-        let view = UIView()
-        view.frame = CGRect(x: 20, y: 50, width: bounds.width - 40, height: bounds.height - 300)
-        view.backgroundColor = .gray
-        view.tag = 1
-        return view
-    }
-    
-    private var xButton: UIButton {
-        let button = UIButton()
-        button.frame = CGRect(x: characterView.bounds.width - 5, y: 55, width: bounds.width * 0.05, height: bounds.width * 0.05)
-        button.tag = 2
-        button.setTitle("X", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 5
-        button.backgroundColor = .red
-        button.addTarget(self, action: #selector(xButtonTapped), for: .touchUpInside)
-        return button
-    }
-    
-    private var characterLabel = UILabel()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         delegateTableView()
         registerTableViewCell()
-        view.addSubview(characterView)
-        view.addSubview(xButton)
-        createCharacterLabel()
-        episodeListTableView.tag = 3
-        episodeListTableView.isHidden = true
-        showAndCloseView()
         
         indicator.startAnimating()
         Client.getEpisodes { response, error in
@@ -60,23 +31,7 @@ final class EpisodeListViewController: BaseViewController {
     }
     
     private func showAndCloseView(){
-        view.viewWithTag(1)?.isHidden.toggle()
-        view.viewWithTag(2)?.isHidden.toggle()
-        view.viewWithTag(3)?.isHidden.toggle()
-        view.viewWithTag(4)?.isHidden.toggle()
-    }
-    
-    private func createCharacterLabel(){
-        characterLabel.frame = CGRect(x: 30, y: 70, width: bounds.width - 70, height: bounds.height - 350)
-        characterLabel.font = UIFont.systemFont(ofSize: 17)
-        characterLabel.numberOfLines = 0
-        characterLabel.tag = 4
-        characterLabel.textColor = .black
-        view.addSubview(characterLabel)
-    }
-    
-    @objc func xButtonTapped(_ sender: UIButton!){
-        showAndCloseView()
+        episodeListTableView.isHidden.toggle()
     }
     
     private func delegateTableView(){
@@ -101,18 +56,31 @@ extension EpisodeListViewController: UITableViewDelegate, UITableViewDataSource{
         guard let cell = episodeListTableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? EpisodesTableViewCell, let episodes = self.episodes else {
             return UITableViewCell()
         }
-        cell.configure(name: episodes[indexPath.row].title, season: episodes[indexPath.row].season)
+        cell.configure(name: episodes[indexPath.row].title, season: episodes[indexPath.row].season, episode: episodes[indexPath.row].episode)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showAndCloseView()
+        let popUpView = PopUpView(frame: CGRect(origin: CGPoint(x:view.center.x - 150, y:view.center.y - 250), size: CGSize(width: 300, height: 500)))
+        popUpView.alpha = 0
+        UIView.animate(withDuration: 1.0) {
+            popUpView.alpha = 1
+        }
+        popUpView.delegate = self
+        view.addSubview(popUpView)
         if let text = episodes?[indexPath.row].characters.joined(separator: ", "){
-            characterLabel.text = text
+            popUpView.episodeCharactersTextView.text = text
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
     }
-    
+}
+
+extension EpisodeListViewController: PopUpViewDelegate{
+    func xBtnPressed() {
+        showAndCloseView()
+        episodeListTableView.reloadData()
+    }
 }

@@ -21,28 +21,24 @@ final class CharacterDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        
-        
     }
     
-    func configure(){
+    private func configure(){
         nameLabel.text = selectedCharacter?.name
         nickNameLabel.text = selectedCharacter?.nickname
         birthdayLabel.text = selectedCharacter?.birthday
         statusLabel.text = selectedCharacter?.status
         if let url = selectedCharacter?.imageUrl {
             imageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "breakingBad"))
+            imageView.layer.borderWidth = 1
+            imageView.layer.cornerRadius = 25.0
         }
-        
-        //imageView.image = UIImage(named: "walterWhite")
     }
     
     @IBAction func quotesButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "toQuotesVC", sender: nil)
     }
-    
-    
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toQuotesVC" {
             let quotesVC = segue.destination as! CharacterQuotesViewController

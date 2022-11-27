@@ -9,19 +9,15 @@ import Foundation
 
 class Client {
     
-    func x(){
-        print("a")
-    }
-    
     enum Endpoints {
         static let base = "https://www.breakingbadapi.com/api"
+        static let imdbWebSiteUrl = "https://www.imdb.com/title/tt0903747/"
         
         case characters
         case characterDetail(Int)
         case characterQuotes(String)
         case episodes
-        
-        //quote?author=Walter+White
+        case imdb
         
         var stringValue: String {
             switch self {
@@ -33,8 +29,9 @@ class Client {
                 characterName = characterName.replacingOccurrences(of: " ", with: "+")
                 return Endpoints.base + "/quote?author=\(characterName)"
             case .episodes:
-                return Endpoints.base + "/episodes"
-                
+                return Endpoints.base + "/episodes?series=Breaking%20Bad"
+            case .imdb:
+                return Endpoints.imdbWebSiteUrl
             }
         }
         
