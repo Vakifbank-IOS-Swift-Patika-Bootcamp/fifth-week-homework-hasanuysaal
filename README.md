@@ -23,7 +23,7 @@ Karakter Detay Ekranı:
 
 ### 1.Tab 
 
-![](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/fourth-week-homework-hasanuysaal/gifs/firstTab.gif)
+![](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/fourth-week-homework-hasanuysaal/blob/main/gifs/firstTab.gif)
 
 ---
 
@@ -41,7 +41,7 @@ Karakterin Sözleri-Alıntıları Ekranı:
 
 ### 2.Tab
 
-![](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/fourth-week-homework-hasanuysaal/gifs/secondTab.gif)
+![](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/fourth-week-homework-hasanuysaal/blob/main/gifs/secondTab.gif)
 
 ---
 
@@ -52,6 +52,6 @@ Karakterin Sözleri-Alıntıları Ekranı:
 
 ### 3.Tab
 
-![](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/fourth-week-homework-hasanuysaal/gifs/thirdTab.gif)
+![](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/fourth-week-homework-hasanuysaal/blob/main/gifs/thirdtTab.gif)
 
 
