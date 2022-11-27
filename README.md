@@ -1,40 +1,57 @@
-# fourth-week-homework
+# BreakingBadApp
 
-1- https://breakingbadapi.com/  API kullanılarak bir uygulama geliştirilecektir. Aşağıda detaylar verilmiştir.
+- Uygulama https://breakingbadapi.com/  API kullanılarak gerçekleştirilmişitir. Aşağıda detaylar verilmiştir.
 --
 
-• Uygulama tablı yapıda olacaktır.(Açılış tabbar) ve 3 ayrı tab olacaktır.
-• Activity indicator kullanılmalıdır.
-• Alert gösterimi yapılmalıdır.
+• Uygulamada TabBar kullanılmıştır.
+• Material Activity indicator kullanılmıştır.
+• Swift Alert View kullanılmıştır.
+• SDWebImage kullanılmıştır.
+
+---
 
 ## 1.Tab - Karakterler:
 
-• Bu ekranda karakterler listelenecektir.
-• CollectionViewda en az karakterin ismi, doğum günü ve takma adı olacaktır.
-• Listeden karaktere bastığımda karakter detay ekranına yönlenmelidir.
+• Bu ekranda karakterler listelenmiştir.
+• CollectionViewda karakterin görseli, ismi, doğum günü ve takma adı gösterilmiştir.
+• Listeden karaktere basıldığında karakter detay ekranını açılmaktadır.
 
 Karakter Detay Ekranı:
 
-• Karakterin görseli ile birlikte en az 4 bilgisi yer almalıdır.
-• Ekranda bir button olmalı ve bu button karakterin sözleri(alıntıları) ekranına yönlenmelidir.
+• Karakterin görseli ile birlikte ismi, takma adı, doğum tarihi, hayatta olma durumu gösterilmiştir.
+• Ekranda bir button bulunmaktadır. Bu buttona tıklandığında karakterin sözleri(alıntıları) ekranı açılmaktadır.
+
+### 1.Tab 
+
+![](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/fourth-week-homework-hasanuysaal/gifs/firstTab.gif)
+
+---
 
 Karakterin Sözleri-Alıntıları Ekranı:
 
-• Ekranda karakterin sözleri-alıntıları listelenmelidir.
+• Ekranda karakterin sözleri-alıntıları listelenmektedir.
 
 ## 2.Tab - Bölümler:
 
-• Ekranda bölümler listelenmelidir.
-• TableViewda en az ismi ve sezonu bulunmalıdır.
-• Listeden bölüme bastığımda ekranın üstünde bir detay view açılmalıdır.(ViewController değil View olacak).
-• View üzerinde bölümdeki oyuncular yer almalı sağ üst köşede kapat butonu olmalı.
-• Kapat butonu aksiyonu delegate ile yönetilebilmelidir.(Kapata bastığımda liste ekranında print yazılması yeterlidir.)
+• Ekranda bölümler listelenmektedir.
+• TableViewda bölümün ismi, sezonu ve bölüm numarası bulunmaktadır.
+• Listeden bölüme basıldığında ekranın üstünde bir detay view açılmaktadır.
+• View üzerinde bölümdeki oyuncular yer almakta ve sağ üst köşede kapat butonu bulunmaktadır.
+• Kapat butonu aksiyonu delegate ile yönetilmiştir.
+
+### 2.Tab
+
+![](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/fourth-week-homework-hasanuysaal/gifs/secondTab.gif)
+
+---
 
 ## 3.Tab- IMDB Sayfası
  
-• Ekranda Webview ile IMDBde dizinin sayfası açılmalıdır.
+• Ekranda Webview ile IMDBde dizinin sayfası açılmaktadır.
+• Navigation Barda bulunan refresh butonuna basıldığında web sitesi yenilenmektedir.
 
-2- Clean Code - 1, 2, 3, 4 chapterlar özetlenmelidir.
---
+### 3.Tab
 
-Kolay gelsin :)
+![](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/fourth-week-homework-hasanuysaal/gifs/thirdTab.gif)
+
+
