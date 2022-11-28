@@ -26,6 +26,7 @@
 		40B394B92934A70C00F05998 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 40B394B82934A70C00F05998 /* SDWebImage */; };
 		40B394BB2934A71300F05998 /* SwiftAlertView in Frameworks */ = {isa = PBXBuildFile; productRef = 40B394BA2934A71300F05998 /* SwiftAlertView */; };
 		40B394BD2934A92200F05998 /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B394BC2934A92200F05998 /* NoteListViewController.swift */; };
+		40B394C02934C8A800F05998 /* NoteCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40B394BE2934C8A700F05998 /* NoteCoreDataModel.xcdatamodeld */; };
 		40C7082A292CB2C700D3BD45 /* ImdbWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */; };
 		40F36D2E2933B5C9005D5C8A /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F36D2D2933B5C9005D5C8A /* PopUpView.swift */; };
 		40F36D302933B5E3005D5C8A /* PopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F36D2F2933B5E3005D5C8A /* PopUpView.xib */; };
@@ -55,6 +56,7 @@
 		40AC897A292EB008009747D2 /* QuotesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuotesTableViewCell.xib; sourceTree = "<group>"; };
 		40AC897F292EB80D009747D2 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		40B394BC2934A92200F05998 /* NoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
+		40B394BF2934C8A700F05998 /* NoteCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImdbWebViewViewController.swift; sourceTree = "<group>"; };
 		40F36D2D2933B5C9005D5C8A /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		40F36D2F2933B5E3005D5C8A /* PopUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpView.xib; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				401E537E292E181F00E05A8A /* Model */,
 				4076391F292BA1AB009B302E /* View */,
 				40763919292BA0F1009B302E /* Info.plist */,
+				40B394BE2934C8A700F05998 /* NoteCoreDataModel.xcdatamodeld */,
 			);
 			path = BreakingBadApp;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				4076390C292BA0F0009B302E /* AppDelegate.swift in Sources */,
 				4076390E292BA0F0009B302E /* SceneDelegate.swift in Sources */,
 				40FB2078292BCCC900177940 /* EpisodeListViewController.swift in Sources */,
+				40B394C02934C8A800F05998 /* NoteCoreDataModel.xcdatamodeld in Sources */,
 				40AC8980292EB80D009747D2 /* Episode.swift in Sources */,
 				40FB2071292BC19300177940 /* CharacterQuotesViewController.swift in Sources */,
 			);
@@ -598,6 +602,19 @@
 			productName = SwiftAlertView;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		40B394BE2934C8A700F05998 /* NoteCoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				40B394BF2934C8A700F05998 /* NoteCoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 40B394BF2934C8A700F05998 /* NoteCoreDataModel.xcdatamodel */;
+			path = NoteCoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 40763900292BA0F0009B302E /* Project object */;
 }
