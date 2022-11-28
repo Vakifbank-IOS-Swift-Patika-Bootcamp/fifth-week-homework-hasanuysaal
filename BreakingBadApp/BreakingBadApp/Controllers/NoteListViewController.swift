@@ -7,9 +7,12 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 final class NoteListViewController: BaseViewController {
-
-    @IBOutlet weak var noteListTableView: UITableView!
+    
+    @IBOutlet private weak var noteListTableView: UITableView!
+    
+    private var notes: [Note] = []
     
     private let addNoteButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
@@ -27,6 +30,8 @@ final class NoteListViewController: BaseViewController {
         noteListTableView.delegate = self
         noteListTableView.dataSource = self
         view.addSubview(addNoteButton)
+        notes = CoreDataManager.shared.getNotes()
+        noteListTableView.register(UINib(nibName: "NoteTableViewCell", bundle: nil), forCellReuseIdentifier: "NoteCell")
         
     }
     
@@ -41,12 +46,29 @@ final class NoteListViewController: BaseViewController {
     }
 }
 
+@available(iOS 13.0, *)
 extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        guard let cell = noteListTableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as? NoteTableViewCell, let episode = notes[indexPath.row].episode, let season = notes[indexPath.row].season, let noteDetail = notes[indexPath.row].noteDetail else {
+            return UITableViewCell()
+        }
+        cell.configure(note: noteDetail, season: season, episode: episode)
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        20
+        notes.count
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let note = notes[indexPath.row]
+            CoreDataManager.shared.deleteNote(note: note)
+            notes.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
 }

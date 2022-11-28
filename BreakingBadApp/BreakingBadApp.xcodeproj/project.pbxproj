@@ -27,6 +27,9 @@
 		40B394BB2934A71300F05998 /* SwiftAlertView in Frameworks */ = {isa = PBXBuildFile; productRef = 40B394BA2934A71300F05998 /* SwiftAlertView */; };
 		40B394BD2934A92200F05998 /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B394BC2934A92200F05998 /* NoteListViewController.swift */; };
 		40B394C02934C8A800F05998 /* NoteCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40B394BE2934C8A700F05998 /* NoteCoreDataModel.xcdatamodeld */; };
+		40B394C22934C9E200F05998 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B394C12934C9E200F05998 /* CoreDataManager.swift */; };
+		40B394C62934D76200F05998 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B394C42934D76200F05998 /* NoteTableViewCell.swift */; };
+		40B394C72934D76200F05998 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40B394C52934D76200F05998 /* NoteTableViewCell.xib */; };
 		40C7082A292CB2C700D3BD45 /* ImdbWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */; };
 		40F36D2E2933B5C9005D5C8A /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F36D2D2933B5C9005D5C8A /* PopUpView.swift */; };
 		40F36D302933B5E3005D5C8A /* PopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F36D2F2933B5E3005D5C8A /* PopUpView.xib */; };
@@ -57,6 +60,9 @@
 		40AC897F292EB80D009747D2 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		40B394BC2934A92200F05998 /* NoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
 		40B394BF2934C8A700F05998 /* NoteCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		40B394C12934C9E200F05998 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		40B394C42934D76200F05998 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		40B394C52934D76200F05998 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
 		40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImdbWebViewViewController.swift; sourceTree = "<group>"; };
 		40F36D2D2933B5C9005D5C8A /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		40F36D2F2933B5E3005D5C8A /* PopUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpView.xib; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 				401E5382292E18D000E05A8A /* Character.swift */,
 				40AC8977292EAC66009747D2 /* Quotes.swift */,
 				40AC897F292EB80D009747D2 /* Episode.swift */,
+				40B394C12934C9E200F05998 /* CoreDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +215,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		40B394C32934D73300F05998 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				40B394C42934D76200F05998 /* NoteTableViewCell.swift */,
+				40B394C52934D76200F05998 /* NoteTableViewCell.xib */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
 		40F36D312933B7E2005D5C8A /* PopUpView */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +236,7 @@
 		40FB2072292BCA9900177940 /* TableViews */ = {
 			isa = PBXGroup;
 			children = (
+				40B394C32934D73300F05998 /* Notes */,
 				40AC897E292EB01E009747D2 /* Quotes */,
 				40AC897D292EB00B009747D2 /* Episodes */,
 			);
@@ -295,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B394C72934D76200F05998 /* NoteTableViewCell.xib in Resources */,
 				40763918292BA0F1009B302E /* LaunchScreen.storyboard in Resources */,
 				40FB2076292BCBDA00177940 /* EpisodesTableViewCell.xib in Resources */,
 				40763915292BA0F1009B302E /* Assets.xcassets in Resources */,
@@ -316,6 +334,7 @@
 				40FB2075292BCBDA00177940 /* EpisodesTableViewCell.swift in Sources */,
 				401E5385292E195800E05A8A /* Client.swift in Sources */,
 				40B394BD2934A92200F05998 /* NoteListViewController.swift in Sources */,
+				40B394C62934D76200F05998 /* NoteTableViewCell.swift in Sources */,
 				401E5383292E18D000E05A8A /* Character.swift in Sources */,
 				40AC897B292EB008009747D2 /* QuotesTableViewCell.swift in Sources */,
 				400896EA292BB95400149E81 /* CharactersCollectionViewCell.swift in Sources */,
@@ -329,6 +348,7 @@
 				40FB2078292BCCC900177940 /* EpisodeListViewController.swift in Sources */,
 				40B394C02934C8A800F05998 /* NoteCoreDataModel.xcdatamodeld in Sources */,
 				40AC8980292EB80D009747D2 /* Episode.swift in Sources */,
+				40B394C22934C9E200F05998 /* CoreDataManager.swift in Sources */,
 				40FB2071292BC19300177940 /* CharacterQuotesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
