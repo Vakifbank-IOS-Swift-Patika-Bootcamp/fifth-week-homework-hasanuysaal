@@ -21,6 +21,22 @@ final class CoreDataManager {
     }
     
     @discardableResult
+    func updateNote(season: String, episode: String, noteDetail: String, note: Note) -> Note? {
+        note.setValue(season, forKeyPath: "season")
+        note.setValue(episode, forKeyPath: "episode")
+        note.setValue(noteDetail, forKeyPath: "noteDetail")
+        
+        do {
+            try managedContext.save()
+            return note
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
+        return nil
+    }
+    
+    @discardableResult
     func saveNote(season: String, episode: String, noteDetail: String) -> Note? {
         let entity = NSEntityDescription.entity(forEntityName: "Note", in: managedContext)!
         let note = NSManagedObject(entity: entity, insertInto: managedContext)

@@ -30,6 +30,7 @@
 		40B394C22934C9E200F05998 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B394C12934C9E200F05998 /* CoreDataManager.swift */; };
 		40B394C62934D76200F05998 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B394C42934D76200F05998 /* NoteTableViewCell.swift */; };
 		40B394C72934D76200F05998 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40B394C52934D76200F05998 /* NoteTableViewCell.xib */; };
+		40B394C92934E42900F05998 /* CreateUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B394C82934E42900F05998 /* CreateUpdateViewController.swift */; };
 		40C7082A292CB2C700D3BD45 /* ImdbWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */; };
 		40F36D2E2933B5C9005D5C8A /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F36D2D2933B5C9005D5C8A /* PopUpView.swift */; };
 		40F36D302933B5E3005D5C8A /* PopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40F36D2F2933B5E3005D5C8A /* PopUpView.xib */; };
@@ -63,6 +64,7 @@
 		40B394C12934C9E200F05998 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		40B394C42934D76200F05998 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		40B394C52934D76200F05998 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
+		40B394C82934E42900F05998 /* CreateUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUpdateViewController.swift; sourceTree = "<group>"; };
 		40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImdbWebViewViewController.swift; sourceTree = "<group>"; };
 		40F36D2D2933B5C9005D5C8A /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		40F36D2F2933B5E3005D5C8A /* PopUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpView.xib; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				40FB2077292BCCC900177940 /* EpisodeListViewController.swift */,
 				40C70829292CB2C700D3BD45 /* ImdbWebViewViewController.swift */,
 				40B394BC2934A92200F05998 /* NoteListViewController.swift */,
+				40B394C82934E42900F05998 /* CreateUpdateViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B394C92934E42900F05998 /* CreateUpdateViewController.swift in Sources */,
 				40C7082A292CB2C700D3BD45 /* ImdbWebViewViewController.swift in Sources */,
 				40F36D2E2933B5C9005D5C8A /* PopUpView.swift in Sources */,
 				40FB2075292BCBDA00177940 /* EpisodesTableViewCell.swift in Sources */,
