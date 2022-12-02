@@ -22,8 +22,8 @@ final class NoteListViewController: BaseViewController{
     
     private let addNoteButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        button.setTitle("+", for: .normal)
-        button.setTitleColor(.white, for: .normal)
+        let image = UIImage(systemName: "plus")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        button.setImage(image, for: .normal)
         button.backgroundColor = .red
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 25
