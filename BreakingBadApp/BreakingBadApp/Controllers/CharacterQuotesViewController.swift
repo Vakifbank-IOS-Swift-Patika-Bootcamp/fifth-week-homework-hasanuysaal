@@ -22,6 +22,8 @@ final class CharacterQuotesViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setNavBarItems()
+        
         delegateTableView()
         registerTableView()
         
@@ -41,6 +43,12 @@ final class CharacterQuotesViewController: BaseViewController {
             }
         }
     }
+    
+    private func setNavBarItems(){
+        setNavBarTitle(view: self, title: "Character Quotes")
+        setNavBarBackButtonTitle(view: self)
+    }
+    
     
     private func delegateTableView(){
         quotesTableView.delegate = self

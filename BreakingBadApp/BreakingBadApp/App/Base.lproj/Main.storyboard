@@ -286,7 +286,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="anx-Hg-eFX" kind="relationship" relationship="viewControllers" id="w4b-wg-pc1"/>
-                        <segue destination="zCN-8X-yG0" kind="relationship" relationship="viewControllers" id="usl-Eh-wsG"/>
+                        <segue destination="JhT-QE-1Xm" kind="relationship" relationship="viewControllers" id="usl-Eh-wsG"/>
                         <segue destination="N5x-CV-w7y" kind="relationship" relationship="viewControllers" id="lcz-h7-ZEa"/>
                         <segue destination="JST-YY-Rqe" kind="relationship" relationship="viewControllers" id="TcO-B4-wha"/>
                     </connections>
@@ -295,7 +295,7 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
         </scene>
-        <!--Episodes-->
+        <!--Episode List View Controller-->
         <scene sceneID="uvj-QY-uc5">
             <objects>
                 <viewController id="zCN-8X-yG0" customClass="EpisodeListViewController" customModule="BreakingBadApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -304,7 +304,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GMh-8D-0dx">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -317,14 +317,14 @@
                             <constraint firstItem="7hk-Gx-8iB" firstAttribute="bottom" secondItem="GMh-8D-0dx" secondAttribute="bottom" id="mLE-gd-uJ4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Episodes" image="ticket" catalog="system" id="e8u-tB-nDP"/>
+                    <navigationItem key="navigationItem" id="ZrZ-Qk-47d"/>
                     <connections>
                         <outlet property="episodeListTableView" destination="GMh-8D-0dx" id="uah-Hc-qh7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Le-eh-WI6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1125" y="816"/>
+            <point key="canvasLocation" x="-215.94202898550725" y="815.625"/>
         </scene>
         <!--Note List View Controller-->
         <scene sceneID="3fm-l2-TYw">
@@ -375,7 +375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRi-av-nEJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="937.68115942028987" y="835.71428571428567"/>
+            <point key="canvasLocation" x="1847.826086956522" y="835.71428571428567"/>
         </scene>
         <!--Create Update View Controller-->
         <scene sceneID="MPD-jo-1Vb">
@@ -450,7 +450,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxG-fg-GcA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1817" y="836"/>
+            <point key="canvasLocation" x="2726.0869565217395" y="835.71428571428567"/>
         </scene>
         <!--Characters-->
         <scene sceneID="hA3-Th-Ppd">
@@ -488,7 +488,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6j-Xh-ccY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="-615.40178571428567"/>
+            <point key="canvasLocation" x="29" y="-615"/>
         </scene>
         <!--Notes-->
         <scene sceneID="Aej-x4-8hv">
@@ -507,7 +507,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pjx-6n-Y0I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29" y="836"/>
+            <point key="canvasLocation" x="939.13043478260875" y="835.71428571428567"/>
+        </scene>
+        <!--Episodes-->
+        <scene sceneID="MJB-w1-HMt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JhT-QE-1Xm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Episodes" image="ticket" catalog="system" id="e8u-tB-nDP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cut-ic-FUS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zCN-8X-yG0" kind="relationship" relationship="rootViewController" id="31q-C4-2SC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vx-Kv-HxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1126.0869565217392" y="815.625"/>
         </scene>
     </scenes>
     <resources>

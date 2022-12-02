@@ -20,6 +20,8 @@ final class EpisodeListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setNavBarTitle(view: self, title: "Episodes")
+        
         delegateTableView()
         registerTableViewCell()
         

@@ -33,6 +33,9 @@ final class NoteListViewController: BaseViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setNavBarTitle(view: self, title: "Notes")
+        
         notes = CoreDataManager.shared.getNotes()
         noteListTableViewSetup()
         view.addSubview(addNoteButton)

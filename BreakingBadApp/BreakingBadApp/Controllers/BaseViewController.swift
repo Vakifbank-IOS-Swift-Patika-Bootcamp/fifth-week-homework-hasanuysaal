@@ -18,6 +18,15 @@ class BaseViewController: UIViewController {
         setupActivityIndıcatorView()
     }
     
+    
+    func setNavBarBackButtonTitle(view: UIViewController, title: String = ""){
+        view.navigationItem.backBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)
+    }
+    
+    func setNavBarTitle(view: UIViewController, title: String){
+        view.title = title
+    }
+    
     private func setupActivityIndıcatorView(){
         view.addSubview(indicator)
         setupActivityIndıcatorViewConstraints()

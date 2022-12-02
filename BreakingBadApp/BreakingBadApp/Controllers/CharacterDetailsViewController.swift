@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-final class CharacterDetailsViewController: UIViewController {
+final class CharacterDetailsViewController: BaseViewController {
     
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var nickNameLabel: UILabel!
@@ -21,6 +21,12 @@ final class CharacterDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        setNavBarItems()
+    }
+    
+    private func setNavBarItems(){
+        setNavBarTitle(view: self, title: "Character Detail")
+        setNavBarBackButtonTitle(view: self)
     }
     
     private func configure(){

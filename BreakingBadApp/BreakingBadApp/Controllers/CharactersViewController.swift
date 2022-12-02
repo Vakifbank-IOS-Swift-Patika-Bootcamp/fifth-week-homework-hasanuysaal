@@ -19,9 +19,16 @@ final class CharactersViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavBarItems()
         charactersCollectionView.clipsToBounds = false
         delegateCollectionView()
         charactersList()
+        
+    }
+    
+    private func setNavBarItems(){
+        setNavBarTitle(view: self, title: "Characters")
+        setNavBarBackButtonTitle(view: self)
     }
     
     private func charactersList(){
