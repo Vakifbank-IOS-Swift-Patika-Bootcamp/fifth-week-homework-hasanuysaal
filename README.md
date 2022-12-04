@@ -55,3 +55,37 @@ Karakterin Sözleri-Alıntıları Ekranı:
 ![](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/fourth-week-homework-hasanuysaal/blob/main/gifs/thirdTab.gif)
 
 
+=======
+
+# BreakingBadAppv2
+
+## 1- Breaking Bad api uygulamasına persistant özelliği kazandırılmıştır.
+
+### Uygulamaya Yeni bir tab eklenmiştir: Notlar
+
+• Ekranda bölümlerden aldığımız notların listesi bulunmaktadır.
+
+• Listeden sola kaydırarak eleman silinebilmektedir.
+
+• Floating button şeklinde ekle butonumuz sağ altta konumlandırılmıştır.
+
+• Ekle butonuna bastığımızda ekle/düzenle ekranı boş bilgiler ilepresent edilmiştir.
+
+• Listeden item seçtiğimizde ekle/düzenle ekranı seçtiğimiz item bilgileri ile present edilmiştir.
+
+### Ekleme/Düzenleme Ekranı
+
+• Ekleme ekranında sezon, bölüm bilgisi ve not kullanıcıdan alınmıştır.
+
+• Ekleme ekranındaki kaydet butonu ile CoreData üzerinde kayıt edilmiştir.
+
+• Eğer item düzenleme ile gelindiyse ilgili not update edilmiştir.
+
+### 4.Tab
+
+![](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/fifth-week-homework-hasanuysaal/blob/main/gifs/fourthTab.gif)
+
+### 4- Leet Code üzerinden seçilmiş 3 soru çözülmüştür
+
+![](https://github.com/Vakifbank-IOS-Swift-Patika-Bootcamp/fifth-week-homework-hasanuysaal/blob/main/gifs/leetCode.png)
+
