@@ -18,6 +18,15 @@ class BaseViewController: UIViewController {
         setupActivityIndıcatorView()
     }
     
+    func setGestureRecognizer(vc: UIViewController){
+        
+        let gR = UITapGestureRecognizer(target: vc, action: #selector(closeEditing))
+        view.addGestureRecognizer(gR)
+    }
+    
+    @objc func closeEditing(_ sender: UITapGestureRecognizer){
+        sender.view?.endEditing(true)
+    }
     
     func setNavBarBackButtonTitle(view: UIViewController, title: String = ""){
         view.navigationItem.backBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil)

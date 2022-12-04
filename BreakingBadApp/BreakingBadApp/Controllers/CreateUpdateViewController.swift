@@ -11,7 +11,7 @@ protocol CreateUpdateViewDelegate: AnyObject{
     func buttonPressed()
 }
 
-class CreateUpdateViewController: UIViewController {
+class CreateUpdateViewController: BaseViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet private weak var seasonTextField: UITextField!
@@ -26,6 +26,7 @@ class CreateUpdateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textViewSetup()
+        setGestureRecognizer(vc: self)
         if note != nil {
             updateViewSetup()
         } else {
